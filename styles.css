@@ -1,0 +1,41 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f3f6; /* Very light gray background */
+}
+
+.sidebar {
+    background-color: #1b6273; /* Dark teal sidebar */
+    color: #ffffff; /* White text */
+}
+
+h1, h2, h3 {
+    color: #2b3e50; /* Dark teal for titles */
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #1b6273; /* Soft green buttons */
+    color: white;
+}
+
+.card-header {
+    background-color: #1b6273; 
+    color: white;
+    font-weight: bold;
+}
+
+/* Change the selector to match the Shiny sidebar class */
+.shiny-sidebar {
+    background-color: #1b6273; /* Dark teal */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #34495e;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
