@@ -23,6 +23,10 @@ df = pd.read_csv(data_path)
 ########################
 
 ui.page_opts(title="Crime Reports Dashboard", fillable=True)
+# Add a subtitle below the main title
+
+
+ui.h3("An interactive dashboard for analyzing crime reports in KC from September to November of 2024", class_="subtitle")
 
 
 # Sidebar controls for filtering
@@ -74,16 +78,17 @@ with ui.layout_column_wrap(fill=False):
 # Display charts and data table
 with ui.layout_columns():
     with ui.card(full_screen=True):
-        ui.card_header("Age Distribution by Offense")
-
+        ui.card_header("Age Distribution by Sex")
+        
         @render.plot
         def age_distribution():
             return sns.boxplot(
                 data=filtered_df(),
-                x="Offense",
+                x="Sex",
                 y="Age",
                 palette="Set3",
             )
+
 
     with ui.card(full_screen=True):
         ui.card_header("Crime Data Table")
@@ -123,3 +128,6 @@ def filtered_df():
     filt_df = filt_df.loc[filt_df["Age"] <= input.age()]
     
     return filt_df
+
+# Include custom CSS
+ui.include_css(Path(__file__).parent / "styles.css")
