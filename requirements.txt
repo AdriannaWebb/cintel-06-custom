@@ -4,3 +4,4 @@ shinywidgets
 plotly
 pandas
 numpy
+seaborn
